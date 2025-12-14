@@ -1,0 +1,75 @@
+class BankAccount {
+    private String accountNumber;
+    private String accountHolderName;
+    private double balance;
+
+    public BankAccount(String accountNumber, String accountHolderName, double balance)
+     {
+    this.accountNumber = accountNumber;
+        
+    this.accountHolderName = accountHolderName;
+        setBalance(balance);
+    }
+
+    public String getAccountNumber()
+     {
+        return accountNumber;
+    }
+    public void setAccountNumber(String accountNumber)
+     {
+        
+     this.accountNumber = accountNumber;
+    }
+
+    public String getAccountHolderName() 
+    {
+        return accountHolderName;
+    }
+    public void setAccountHolderName(String accountHolderName) 
+    {
+        this.accountHolderName = accountHolderName;
+    }
+    public double getBalance()
+     {
+        return balance;
+    }
+    public void setBalance(double balance)
+     {
+        if (balance < 0)
+         {
+     System.out.println("Error: Balance cannot be negative.");
+        } else 
+        {
+    this.balance = balance;
+        }
+    }
+}
+public class Main
+ {
+    public static void main(String[] args)
+     {
+    BankAccount acc1 = new BankAccount("A101", "Rahim", 5000);
+    BankAccount acc2 = new BankAccount("A102", "Karim", 8000);
+     BankAccount acc3 = new BankAccount("A103", "Sadia", 12000);
+
+acc1.setBalance(6000);
+  acc2.setBalance(-3000);
+ acc3.setBalance(15000);
+
+ System.out.println("Account Details:\n");
+
+        System.out.println("Account Number: " + acc1.getAccountNumber());
+        System.out.println("Account Holder: " + acc1.getAccountHolderName());
+        System.out.println("Balance: " + acc1.getBalance());
+        System.out.println();
+
+        System.out.println("Account Number: " + acc2.getAccountNumber());
+        System.out.println("Account Holder: " + acc2.getAccountHolderName());
+        System.out.println("Balance: " + acc2.getBalance());
+        System.out.println();
+
+        System.out.println("Account Number: " + acc3.getAccountNumber());
+        System.out.println("Account Holder: " + acc3.getAccountHolderName());
+        System.out.println("Balance: " + acc3.getBalance());
+    }
+}
