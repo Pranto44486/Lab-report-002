@@ -1,0 +1,91 @@
+# LabReport02 – Encapsulation in Java
+
+This repository contains the solution for **LabReport02**, which demonstrates the concept of **encapsulation** in Java using a `BankAccount` class.
+
+---
+
+## Lab Objective
+
+The main objective of this lab is to:
+- Understand and implement **encapsulation**
+- Protect sensitive data using `private` access modifiers
+- Provide controlled access using **getter and setter methods**
+- Validate data to prevent invalid updates
+
+---
+
+## Concepts Covered
+
+- Object-Oriented Programming (OOP)
+- Encapsulation
+- Data Hiding
+- Getter and Setter Methods
+- Access Modifiers (`private`, `public`)
+- Input Validation
+
+---
+
+## Problem Description
+
+A class named `BankAccount` is designed to encapsulate account-related information:
+
+### Private Data Members:
+- `accountNumber`
+- `accountHolderName`
+- `balance`
+
+### Requirements:
+- Public getter and setter methods for all fields
+- The `setBalance()` method must reject negative values
+- Error message should be displayed without modifying the balance
+- Create at least three `BankAccount` objects in the main program
+- Print all account details using getter methods
+- Demonstrate that direct access to private fields is not allowed
+
+---
+
+## UML Class Diagram
+    +---------------------------+
+    |        BankAccount        |
+    +---------------------------+
+    | - accountNumber           |
+    | - accountHolderName       |
+    | - balance                 |
+    +---------------------------+
+    | + getAccountNumber()      |
+    | + setAccountNumber()      |
+    | + getAccountHolderName()  |
+    | + setAccountHolderName()  |
+    | + getBalance()            |
+    | + setBalance()            |
+    +---------------------------+
+
+---
+
+## Source Files
+
+- `BankAccount.java` – Defines the BankAccount class with encapsulated data
+- `Main.java` – Contains the main method to test the class
+
+---
+
+## How to Run the Program
+
+1. Clone the repository:
+   ```bash
+   git clone <your-repository-link>
+
+Sample Output
+Error: Balance cannot be negative.
+
+Account Number: A101
+Account Holder: Rahim
+Balance: 6000.0
+
+Account Number: A102
+Account Holder: Karim
+Balance: 8000.0
+
+Account Number: A103
+Account Holder: Sadia
+Balance: 15000.0
